@@ -19,7 +19,7 @@ npm i vue3-lazy-img
 2. 全局mian.ts 里引入
 ```js
 import LazyImg from 'vue3-lazy-img'
-import 'vue3-lazy-img/index.css' // 可以省略
+import 'vue3-lazy-img/dist/index.css'  // 可以省略
 
 createApp(App)
 .use(LazyImg)\
@@ -29,6 +29,12 @@ or
 组件里引入
 ```js
 import { LazyImg } from "vue3-lazyload-img"
+```
+
+ts配置：
+```js
+// shims-vue.d.ts
+declare module 'vue3-lazy-img'
 ```
 
 3. 组件里使用
@@ -41,6 +47,7 @@ import { LazyImg } from "vue3-lazyload-img"
 | -- | -- | --- | --  | 
 | src | 图片路径 | String | 必填 |
 | immediately | 是否立即加载  | Boolean| 否 |
+| title | alt文字  | String| 否 |
 
 5. index.css 简单的动画,可以不引入
 ```css
